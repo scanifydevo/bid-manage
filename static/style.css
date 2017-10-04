@@ -1,0 +1,13 @@
+.date {
+    float: right;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.price {
+    font-size: 20px;
+}
+
+.bidText {
+    margin-top: 10px;
+}
