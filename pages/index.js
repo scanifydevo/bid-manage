@@ -11,17 +11,18 @@ const panes = [
           <Segment>
             <Grid>
               <Grid.Row>
-                <Grid.Column width="4">
+                <Grid.Column width={4}>
                   <Image src='static/default.jpeg' size='tiny' />
                   <p>Username</p>
                 </Grid.Column>
-                <Grid.Column width="12">
+                <Grid.Column width={12}>
                   <Grid.Row>
                     <span className='price'><b>Price/min</b></span>
                     <span className='date'>Last message sent at</span>
                   </Grid.Row>
                   <Grid.Row>
                     <p className='bidText'>Message Preview Text...</p>
+                    <p className="read">READ</p>
                   </Grid.Row>
                 </Grid.Column>
               </Grid.Row>
@@ -38,11 +39,11 @@ const panes = [
           <Segment>
             <Grid>
               <Grid.Row>
-                <Grid.Column width="4">
+                <Grid.Column width={4}>
                   <Image src='static/default.jpeg' />
                   <p>Username</p>
                 </Grid.Column>
-                <Grid.Column width="12">
+                <Grid.Column width={12}>
                   <Grid.Row>
                     <span>Price/min</span>
                     <span>Last message sent at</span>
@@ -75,6 +76,14 @@ const bidData = [
     'time': 'Last message sent at',
     'text': 'Message Preview Text',
     'read': 'false'
+  },
+  {
+    'avatar': '',
+    'username': 'Username',
+    'minprice': 'Price/min',
+    'time': 'Last message sent at',
+    'text': 'Message Preview Text',
+    'read': 'true'
   },
   {
     'avatar': '',
