@@ -29,12 +29,12 @@
 }
 
 .role {
-    margin: 10px 0 0 10px;
+    margin: 15px 10px 0 10px;
+    font-size: 18px;
 }
 
 .recipient {
-    margin: 10px 0 0 10px;
-    float: right;
+    text-align: right;
 }
 
 .time {
@@ -42,4 +42,31 @@
     font-style: italic;
     font-size: 18px;
     margin-top: 10px;
+}
+
+.segment-sender {
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+.segment-recipient {
+    width: 80%;
+    margin-left: auto;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.bid-price {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.enter-text {
+    width: 700px;
+    margin-right: 10px;
+}
+
+.group {
+    text-align: center;
+    margin-top: 20px;
 }
