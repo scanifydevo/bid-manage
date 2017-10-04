@@ -12,17 +12,16 @@ const panes = [
             <Grid>
               <Grid.Row>
                 <Grid.Column width={4}>
-                  <Image src='static/default.jpeg' size='tiny' />
-                  <p>Username</p>
+                  <Image centered src='static/default.jpeg' size='tiny' />
+                  <p className='username'>{data.username}</p>
                 </Grid.Column>
                 <Grid.Column width={12}>
                   <Grid.Row>
-                    <span className='price'><b>Price/min</b></span>
-                    <span className='date'>Last message sent at</span>
+                    <span className='price'>{data.minprice}</span>
+                    <span className='date'>{data.time}</span>                    
                   </Grid.Row>
                   <Grid.Row>
-                    <p className='bidText'>Message Preview Text...</p>
-                    <p className="read">READ</p>
+                    <p className='bidText'>{data.text}</p>
                   </Grid.Row>
                 </Grid.Column>
               </Grid.Row>
@@ -40,16 +39,16 @@ const panes = [
             <Grid>
               <Grid.Row>
                 <Grid.Column width={4}>
-                  <Image src='static/default.jpeg' />
-                  <p>Username</p>
+                  <Image centered src='static/default.jpeg' />
+                  <p className='username'>Username</p>
                 </Grid.Column>
                 <Grid.Column width={12}>
                   <Grid.Row>
-                    <span>Price/min</span>
-                    <span>Last message sent at</span>
+                    <span className='price'><b>{data.minprice}</b></span>
+                    <span className='date'>{data.time}</span>
                   </Grid.Row>
                   <Grid.Row>
-                    <p>Message Preview Text...</p>
+                    <p className='bidText'>{data.text}</p>
                   </Grid.Row>
                 </Grid.Column>
               </Grid.Row>
@@ -66,7 +65,7 @@ const bidData = [
     'username': 'Username',
     'minprice': 'Price/min',
     'time': 'Last message sent at',
-    'text': 'Message Preview Text',
+    'text': 'Message Preview Text...',
     'read': 'true'
   },
   {
@@ -74,7 +73,7 @@ const bidData = [
     'username': 'Username',
     'minprice': 'Price/min',
     'time': 'Last message sent at',
-    'text': 'Message Preview Text',
+    'text': 'Message Preview Text...',
     'read': 'false'
   },
   {
@@ -82,7 +81,7 @@ const bidData = [
     'username': 'Username',
     'minprice': 'Price/min',
     'time': 'Last message sent at',
-    'text': 'Message Preview Text',
+    'text': 'Message Preview Text...',
     'read': 'true'
   },
   {
@@ -90,7 +89,7 @@ const bidData = [
     'username': 'Username',
     'minprice': 'Price/min',
     'time': 'Last message sent at',
-    'text': 'Message Preview Text',
+    'text': 'Message Preview Text...',
     'read': 'true'
   },
   {
@@ -98,7 +97,7 @@ const bidData = [
     'username': 'Username',
     'minprice': 'Price/min',
     'time': 'Last message sent at',
-    'text': 'Message Preview Text',
+    'text': 'Message Preview Text...',
     'read': 'true'
   }
 ]
@@ -151,17 +150,27 @@ export default () =>
           </Grid.Column>
           <Grid.Column width={10}>
             <Segment>
-              {bidData.map((data, index) =>
+              {chatData.map((data, index) => 
+                data.role == 'Sender'?
+                <Segment>                
+                  <Image src='static/default.jpeg' size='mini' inline />
+                  <span className='role'><b>Sender</b><span className='date'>{data.time}</span></span>
+                  <Segment>
+                    <div className="text">{data.text}</div>
+                  </Segment>
+                </Segment>
+                :
                 <Segment>
-                  <Header
-                    as='h5'
-                    image='static/default.jpeg'
-                    content='Sender'
-                    />
-                    <Segment>
-                      <div>Message Text - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
-                    </Segment>
-                </Segment>)}
+                  <div>
+                    <span className='time'>{data.time}</span>                  
+                    <span className='recipient'><b>Recipient</b></span>
+                    <Image src='static/default.jpeg' size='mini' inline />
+                  </div>            
+                  <Segment>
+                    <div className="text">{data.text}</div>
+                  </Segment>
+                </Segment>
+              )}
             </Segment>
           </Grid.Column>
         </Grid.Row>

@@ -2,19 +2,44 @@
     float: right;
     font-style: italic;
     font-size: 18px;
+    margin-top: 10px;
 }
 
-.price {
-    /* padding-top: 30px; */
+.price {    
     font-size: 22px;
+    margin-top: 10px;
 }
 
 .bidText {
-    padding-top: 30px;
-    font-size: 25px;
+    padding-top: 25px;
+    font-size: 22px;
     margin-bottom: 0px;
 }
 
-.read {
+.text {
+    font-size: 18px;
+}
+
+.heading {
+    margin-top: 10px;
+}
+
+.username {
+    text-align: center;
+}
+
+.role {
+    margin: 10px 0 0 10px;
+}
+
+.recipient {
+    margin: 10px 0 0 10px;
     float: right;
+}
+
+.time {
+    float: left;
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 10px;
 }
