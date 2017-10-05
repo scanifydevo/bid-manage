@@ -62,11 +62,21 @@
 }
 
 .enter-text {
-    width: 700px;
     margin-right: 10px;
+    width: 100%;
 }
 
 .group {
     text-align: center;
     margin-top: 20px;
+}
+
+.btn-button {
+    width: 100%;
+}
+
+.active-border {
+    border-style: solid;
+    border-width: 0.8em;
+    border-color: #808080;
 }
