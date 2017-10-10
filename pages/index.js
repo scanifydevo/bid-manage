@@ -4,50 +4,65 @@ import { hello } from '~/core'
 import classNames from 'classnames'
 import {Grid, Image, Tab, Container, Segment, Item, Button, Input} from 'semantic-ui-react'
  
+const userData = [
+  {
+    id: '1ba80d98-673b-484c-93a9-00c71ef64538',
+    created_at: '2017-08-28T12:22:31.806Z',
+    updated_at: '2017-09-14T14:09:01.875Z',
+    email: 'jjfraz11@gmail.com',
+    email_verified: true,
+    nickname: 'jjfraz11',
+    chatname: 'fraze',
+    given_name: 'Jonathan',
+    family_name: 'Frazier',
+    picture: 'https://lh3.googleusercontent.com/-EYi_ZUytEQY/AAAAAAAAAAI/AAAAAAAAANs/dDz-YqupIvA/photo.jpg',
+    gender: 'male',
+    locale: 'en',
+    sub: 'google-oauth2|118155937302787181162'
+  }
+]
+
 const bidData = [
   {
-    'avatar': '',
-    'username': 'Username',
+    'id': '',
+    'created_at': '',
+    'updated_at': '',
+    'subject_id': '',
+    'subject_type': 'User',
+    'price': '',
+    'min_duration': '',
+    'max_duration': '',
+    'message': '',
     'minprice': 'Price/min',
     'time': 'Last message sent at',
     'text': 'Message Preview Text...',
     'read': 'true'
   },
   {
-    'avatar': '',
-    'username': 'Username',
     'minprice': 'Price/min',
     'time': 'Last message sent at',
     'text': 'Message Preview Text...',
     'read': 'false'
   },
   {
-    'avatar': '',
-    'username': 'Username',
     'minprice': 'Price/min',
     'time': 'Last message sent at',
     'text': 'Message Preview Text...',
     'read': 'true'
   },
   {
-    'avatar': '',
-    'username': 'Username',
     'minprice': 'Price/min',
     'time': 'Last message sent at',
     'text': 'Message Preview Text...',
     'read': 'true'
   },
   {
-    'avatar': '',
-    'username': 'Username',
     'minprice': 'Price/min',
     'time': 'Last message sent at',
     'text': 'Message Preview Text...',
     'read': 'true'
   },
   {
-    'avatar': '',
-    'username': 'Username',
     'minprice': 'Price/min',
     'time': 'Last message sent at',
     'text': 'Message Preview Text...',
@@ -57,6 +72,13 @@ const bidData = [
 
 const chatData = [
   {
+    'id': '',
+    'created_at': '',
+    'updated_at': '',
+    'user_one_id': '',
+    'user_two_id': '',
+    'subject_id': '',
+    'subject_type':'',
     'avatar': '',
     'username': '',
     'role': 'Sender',
@@ -177,9 +199,6 @@ class App extends React.Component {
   selectHandler(index) {
     
     this.setState({activeIndex: index})
-    console.log(index)
-    console.log(this.state.activeIndex)
-
   }
 
   render() {
